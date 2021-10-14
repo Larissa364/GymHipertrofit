@@ -39,10 +39,6 @@ namespace GymHipertrofit
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -136,7 +132,7 @@ namespace GymHipertrofit
                 try
                 {
                     Con.Open();
-                    string query = "delete from MemberTbl where MId=" + key + " ;";
+                    string query = "delete from MemberTbl where Id=" + key + " ;";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Membro deletado com sucesso");
@@ -147,6 +143,11 @@ namespace GymHipertrofit
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }

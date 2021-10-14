@@ -1,0 +1,2 @@
+xcopy \\IP address\folder_share_name\*.* /s /y /d /q  
+start "label" /b "youraplicationname.exe"
